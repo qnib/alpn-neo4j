@@ -11,7 +11,7 @@ consul:
 neo4j:
     hostname: neo4j
     container_name: neo4j
-    image: qnib/alpn-neo4j
+    image: qnib/alpn-neo4j:2.3.3
     dns: 127.0.0.1
     links:
      - consul:consul
