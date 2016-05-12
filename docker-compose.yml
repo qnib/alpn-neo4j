@@ -1,0 +1,19 @@
+consul:
+    hostname: consul
+    container_name: consul
+    image: qnib/alpn-consul
+    environment:
+     - CONSUL_BOOTSTRAP_EXPECT=1
+    ports:
+     - "8500:8500"
+    dns: 127.0.0.1
+
+neo4j:
+    hostname: neo4j
+    container_name: neo4j
+    image: qnib/alpn-neo4j
+    dns: 127.0.0.1
+    links:
+     - consul:consul
+    ports:
+     - "7474:7474"
