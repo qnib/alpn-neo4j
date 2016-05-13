@@ -5,7 +5,7 @@ consul:
     environment:
      - CONSUL_BOOTSTRAP_EXPECT=1
     ports:
-     - "8500:8500"
+     - 8500
     dns: 127.0.0.1
 
 neo4j:
